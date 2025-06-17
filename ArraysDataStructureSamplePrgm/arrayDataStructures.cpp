@@ -86,30 +86,16 @@ void printUniqueElements(int arrrr[], int sizsse)
 }
 
 void printCommonArray(int arr1[], int size1, int arr2[], int size2){
-
     
-    int commonArray[] = 1;
     for(int i=0; i<size1; i++){
-
-        for(int j=0; j<size2;j++){
-            if(i == j){
-                continue;
-            }
-            if(arr1[i] == arr2[j]){
-
-                commonArray = true;
-            }
-        }
-
-    }
-
-    if(commonArray){
-        for(int i=0; i< 5; i++){
-            cout<<commonArray[i];
+        int num1 = arr1[i];
+        for(int j=0; j<size2; j++){
+          int num2 = arr2[j];
+          if(num1 == num2){
+            cout << num1 << endl;
+          }
         }
     }
-
-
 }
 
 int main()
@@ -235,13 +221,10 @@ int main()
     //WAF to print intersection of 2 arrays.
 
     int arr1[] = {1,2,3,4,5};
-    int arr2[] = {4,3,5,7,9};
-    int size1 = sizeof(arr1);
-    int size2 = sizeof(arr2);
+    int arr2[] = {6,7,3,1};
+    int size1 = 5;
+    int size2 = 4;
 
     printCommonArray(arr1, size1, arr2, size2);
-
-    
-
     return 0;
 }
